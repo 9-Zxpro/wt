@@ -20,12 +20,15 @@
         <div class="centertitle ">
             SEARCH BUS
         </div>
+        
+        <div  class="errordiv ">
         <%
             String msg = request.getParameter("msg");
             if (msg != null) {
                 out.print(msg);
             }
         %>
+    </div>
         <div class="centerform ">
             <form name="SearchBusFormController" action="SearchBusFormController"
                   onsubmit="return validateLogin12();" method="post">

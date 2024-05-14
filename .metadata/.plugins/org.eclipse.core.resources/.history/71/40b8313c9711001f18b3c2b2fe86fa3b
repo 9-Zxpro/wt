@@ -5,9 +5,8 @@
 		height:60px;
 		font-size:26px;
 		font-weight:500;
-		color:var(--bg);
+		color:#eecc11;
 		text-align:center;
-		margin-top: 10px;
 		text-transform:uppercase;
 	}
 	.main-body {

@@ -28,12 +28,20 @@ header {
 option{
 	color:#333;
 }
+
 .mymainWrapper {
 	width: 75%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
+}
+.myWindow {
+	flex-direction: column;
+	
+}
+.commonWindow {
+	margin-bottom: 20px;
 }
 .myWrapper {
 	display: flex;
@@ -42,9 +50,10 @@ option{
 	padding: 10px;
 }
 .leftWrapper{
-	padding: 0px;
+	padding: 20px;
 	height: 400px;
-	margin: 0 0 0 20px;
+	width: 30%;
+	margin: 0 40px 0 0;
 	background-color: rgba(50, 50, 50, 0.5);
 	border-top: 5px solid #eecc11;	
 	float: left;
@@ -52,11 +61,12 @@ option{
 	border-top-right-radius: 20px;
 }
 .rightWrapper{
-	padding: 0px;
+	padding: 20px;
 	background-color: rgba(50, 50, 50, 0.5);
 	border-top: 5px solid #d9534f;
 	height: 400px;
-	margin: 0 20px 0 0;
+	width: 30%;
+	margin: 0 0 0 40px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	float: right;
@@ -85,6 +95,7 @@ option{
 }
 .centerformWrapper{
 	padding: 20px;
+	width: 35%;
 	background-color: rgba(50, 50, 50, 0.5);
 	border-top: 5px solid #eecc11;
 	border-top-left-radius: 20px;
@@ -97,6 +108,7 @@ option{
 	text-align:center;
 	margin-bottom: 15px;
 	margin-top: 15px;
+	border-bottom : 2px solid #FFF;
 }
 .centertitle a{
 	text-decoration:none;
@@ -106,11 +118,12 @@ option{
 	color:#FFF;
 }
 .errordiv{
+	display: flex;
+	justify-content: center;
 	border-radius: 20px;
-	margin-left: 10%;
+	background-color: #f0ad4e;
 }
 .errordiv p{
-	color:  #f0ad4e;
 	font-size:16px;
 	font-weight:bold;
 }
@@ -126,21 +139,33 @@ option{
 	padding: 8px;
 	outline: none;
 	border-radius: 8px;
+	width: 100%;
+}
+.buttoncenter {
+	margin: 0 60px 0 60px;
+	display: flex;
+	justify-content: space-between;
 }
 .btnsuccess {
 	background-color: #28a745;
-	padding: 8px 16px 8px 16px;
-	border-radius: 16px;
+	padding: 8px 26px 8px 26px;
+	border-radius: 8px;
+	color: #FFF;
+	font-weight: 800;
 }
 .btnwarning {
 	background-color: #ffc107;
-	padding: 8px 16px 8px 16px;
-	border-radius: 16px;
+	padding: 8px 26px 8px 26px;
+	border-radius: 8px;
+	color: #FFF;
+	font-weight: 800;
 }
 .btndanger {
 	background-color: #dc3545;
-	padding: 8px 16px 8px 16px;
-	border-radius: 16px;
+	padding: 8px 26px 8px 26px;
+	border-radius: 8px;
+	color: #FFF;
+	font-weight: 800;
 }
 .forgotpwd{
 	font-size:14px;
@@ -148,8 +173,16 @@ option{
 }
 .logOptions{
 	background-color:#d9534f;
+	margin-top: 40px;
+	text-align: center;
+	padding: 8px;
 }
-/*CSS FOR ANIMATIONS*/
+.logOptions a {
+	color: #FFF;
+}
+.logOptions span {
+	margin: 0 8px 0 8px;
+}
 .logOptions a:hover{
 	color: #428bca;
 }
@@ -163,8 +196,6 @@ option{
 	padding-top:6px;
 	background-color: rgba(50, 50, 50, 0.5);
 }
-/*ANIMATION CSS ENDS HERE*/
-
 
 .upperBody {
 	width: 100%;

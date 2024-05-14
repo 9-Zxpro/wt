@@ -1,13 +1,12 @@
-:root{
+var{
 	--bg: rgba(65, 65, 65);
 }
 	.formTitle{
 		height:60px;
 		font-size:26px;
 		font-weight:500;
-		color:var(--bg);
+		color:#eecc11;
 		text-align:center;
-		margin-top: 10px;
 		text-transform:uppercase;
 	}
 	.main-body {
@@ -20,7 +19,7 @@
 		width: 25%;
 		padding:0px;
 		margin:0px;
-		background-color: var(--bg);
+		background-color: --bg;
 		border-top: 5px solid #eecc11;
 	}
 	.left-column ul{
@@ -32,12 +31,12 @@
 		list-style: none;
 		padding-top:10px;
 		padding-bottom:10px;
-		border-bottom:1px solid var(--bg);
+		border-bottom:1px solid #aaa;
 	}
 	.userdetails{
 		margin-top:10px;
 		height:40px;
-		border-bottom:1px solid var(--bg);
+		border-bottom:1px solid #aaa;
 		color:#fff;
 		padding-left:10px;
 		font-size:16px;
@@ -69,7 +68,7 @@
     width: 8px;
 }
 	::-webkit-scrollbar-thumb {
-    background: var(--bg);
+    background: #888;
     border-radius: 8px;
 }
 	.dashboardBody{
@@ -110,7 +109,7 @@
 		overflow:hidden;
 	}
 	.dashimg{
-		background-color: var(--bg);
+		background-color: rgba(0, 0, 0, 0.5);
 		height:140px;
 		width: 200px;
 		margin-top:10px;

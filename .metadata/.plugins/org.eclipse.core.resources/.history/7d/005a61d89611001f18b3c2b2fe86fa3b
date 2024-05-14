@@ -42,7 +42,7 @@
 .myheader {
 	height: 100px;
 	font-size: 32px;
-	background-color: rgba(65, 65, 65);
+	background-color: rgba(50, 50, 50, 0.5);
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 10px;
