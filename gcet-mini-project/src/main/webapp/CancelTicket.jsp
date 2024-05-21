@@ -53,13 +53,19 @@
 	<div class="centerformWrapper">
 		<div class="formTitle ">Cancel Ticket</div>
 		<div class="errordiv ">
-		<%
+		<%-- <%
 			if (request.getParameter("msg") != null) {
 		%>
 		<h4><%=request.getParameter("msg")%> for booking ID <%=request.getParameter("bid")%></h4>
 		<%
 			}
-		%>
+		%> --%>
+		<%
+                String msg = request.getParameter("msg");
+                if (msg != null) {
+                    out.print(msg +" for booking ID " + request.getParameter("bid"));
+                }
+            %>
 		</div>
 		<div class="centerform ">
 			<form name="cancelTicket" action="CancelTicketController" method="post">

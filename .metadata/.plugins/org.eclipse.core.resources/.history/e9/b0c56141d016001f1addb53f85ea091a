@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<jsp:include page="layout/Header.jsp" />
+
+<!-- Session validation for bus operator  -->
+<%
+	if(session.getAttribute("type")==null || (!session.getAttribute("type").equals("busoperator"))){
+		response.sendRedirect("BusOperatorLogin.jsp");
+	}
+%>
+<!-- session validation ends -->
+
+
+<div class="left-column ">
+	<ul>
+		<li><a href="AddNewBus.jsp">Add new bus</a>
+		</li>
+		<li><a href="GetAddedBuses.jsp">Show buses</a>
+		</li>
+		<li><a href="DeleteBusOperator.jsp">Delete Bus</a>
+		</li>
+		<li><a href="Logout.jsp">Logout</a>
+		</li>
+	</ul>
+</div>
+<!-- ***********   START   *********** -->
+<div class="mymainWrapper">
+	<div class="centerformWrapper">
+		<div class="centertitle">
+			DELETE BUSOPERTOR</div>
+
+
+		<div class="errordiv">
+			<%
+				if (request.getParameter("msg") != null) {
+			%>
+			<h4><%=request.getParameter("msg")%></h4>
+			<%
+				}
+			%>
+		</div>
+
+
+
+		<div class="centerform ">
+			<form name="deletebusoperator"
+				action="DeleteBusOperatorFormController"
+				onsubmit="return validateLogin6();" method="post">
+
+				<div class="formgroup">
+					<label for="phonenumber">Enter Phone No:</label> <input type="text"
+						id="phonenumber" class="formcontrol" name="phonenumber">
+				</div>
+				<div class="formgroup">
+					<label for="password">Enter Password:</label> <input
+						type="password" id="password" class="formcontrol" name="password">
+				</div>
+				<div class="formgroup">
+					<input type="submit" class="btn btndanger" value="Delete Account">
+					<input type="reset" class="btn btndanger" value="Cancel">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- ********************************* -->
+<jsp:include page="layout/Footer.jsp" />
+
+
+
+
+
+

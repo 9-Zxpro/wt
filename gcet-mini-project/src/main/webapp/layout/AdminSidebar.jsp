@@ -2,9 +2,10 @@
     pageEncoding="UTF-8"%>
 <div class="left-column">
 	<ul>
+		<li><a href="indexAdmin.jsp">Home</a></li>
 		<li><a href="ViewBusOperators.jsp">View Bus Operator</a></li>
-		<!-- <li><a href="addnewbusoperator.jsp">Add Bus Operator</a></li>
-		<li><a href="DeleteBusOperatorByAdmin.jsp">Delete Bus Operator</a></li> -->
+		<li><a href="addnewbusoperator.jsp">Add Bus Operator</a></li>
+		<li><a href="DeleteBusOperatorByAdmin.jsp">Delete Bus Operator</a></li>
 		<li><a href="ViewRegisteredUsers.jsp">View Users</a></li>				
 		<li><a href="ViewAllBookings.jsp">View Bookings</a></li>
 		<li><a href="Logout.jsp">Logout</a></li>

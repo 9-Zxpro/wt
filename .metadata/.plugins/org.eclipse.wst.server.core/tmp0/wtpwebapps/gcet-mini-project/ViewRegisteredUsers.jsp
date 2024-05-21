@@ -5,11 +5,11 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="com.gcetminiwebproject.models.UserModel"%>
 <!-- Session validation for bus operator  -->
-<%-- <%
+<%
 	if (session.getAttribute("type") == null) {
 		response.sendRedirect("AdminLogin.jsp");
 	}
-%> --%>
+%>
 <!-- session validation ends -->
 <jsp:include page="layout/Header.jsp" />
 <!-- ***********   START   *********** -->

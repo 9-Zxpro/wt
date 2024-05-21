@@ -1,0 +1,58 @@
+<%@page import="com.cognizant.model.AdminModel"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.cognizant.model.UserModel"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!-- Session validation for bus operator  -->
+<%
+	if (session.getAttribute("type") == null) {
+		response.sendRedirect("AdminLogin.jsp");
+	}
+%>
+<!-- session validation ends -->
+<jsp:include page="layout/Header.jsp" />
+<jsp:include page="layout/AdminSidebar.jsp" />
+<!-- ***********   START   *********** -->
+<%
+	ResultSet rs = null;
+	AdminModel am = new AdminModel();
+	am.setUserid(String.valueOf(session.getAttribute("userid")));
+	rs = am.showAllBusOperators();
+%>
+<div class="mymainWrapper ">
+	<div class="tableWrapper ">
+		<div class="centertitle ">
+			Bus Operators</div>
+		<div class="tableContent ">
+			<table class="table tablebordered">
+				<tr>
+					<td>Operator ID</td>
+					<td>Operator Name</td>
+					<td>Address</td>
+					<td>EMail</td>
+					<td>City</td>
+					<td>Phone Number</td>
+					<td>Password</td>
+				</tr>
+				<%
+					while (rs.next()) {
+				%>
+				<tr>
+					<td><%=rs.getString(1)%></td>
+					<td><%=rs.getString(2)%></td>
+					<td><%=rs.getString(3)%></td>
+					<td><%=rs.getString(4)%></td>
+					<td><%=rs.getString(5)%></td>
+					<td><%=rs.getString(6)%></td>
+					<td><%=rs.getString(7)%></td>
+				</tr>
+				<%
+					}
+					rs.close();
+				%>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- ********************************* -->
+<jsp:include page="layout/Footer.jsp" />

@@ -1,0 +1,91 @@
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<jsp:include page="layout/Header.jsp" />
+
+
+<!-- Session validation for bus operator  -->
+<%
+	if(session.getAttribute("type")==null || (!session.getAttribute("type").equals("busoperator"))){
+		response.sendRedirect("BusOperatorLogin.jsp");
+	}
+%>
+<!-- session validation ends -->
+
+
+<!-- ***********   START   *********** -->
+<div class="main-body" >
+<div class="left-column">
+	<ul>
+		<li><a href="AddNewBus.jsp">Add new bus</a></li>
+		<li><a href="GetAddedBuses.jsp">Show buses</a></li>
+		<li><a href="Logout.jsp">Logout</a>
+	</ul>
+</div>
+
+<div class="dashboard">
+	<div class="dashboardBody ">
+		<div class="formTitle">
+		BUS OPERATOR Dashboard
+		</div>
+		
+		<div class="errordiv">
+		<%
+	try {
+		String msg = "";
+		if (request.getParameter("msg") != null) {
+			msg = request.getParameter("msg");
+			out.print("<div><p>" + msg + "</p></div>");
+			System.out.print("kkkk");
+		}
+	} catch (Exception e) {
+	}
+%>
+		</div>
+		
+		<div class="dashboarddiv">
+			<div class="odd ">
+				<div class="dashimg">
+					Add new bus
+				</div>
+				<div class="dashcontent">
+					<a href="AddNewBus.jsp">Add</a>
+				</div>
+			</div>
+			<div class="even">
+				<div class="dashimg">
+					Show buses
+					</div>
+				<div class="dashcontent">					
+					<a href="GetAddedBuses.jsp">Show</a>
+				</div>
+			</div>
+			<div class="odd ">			
+				<div class="dashimg">
+					Change Password
+				</div>
+				<div class="dashcontent">
+					<a href="ChangePassword.jsp">Change</a>	
+				</div>
+			</div>
+			<div class="odd ">			
+				<div class="dashimg">
+					Delete account
+				</div>
+				<div class="dashcontent">
+					<a href="DeleteBusOperator.jsp">Delete</a>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<jsp:include page="layout/Footer.jsp" />
+
+
+<ul>
+	
+</ul>

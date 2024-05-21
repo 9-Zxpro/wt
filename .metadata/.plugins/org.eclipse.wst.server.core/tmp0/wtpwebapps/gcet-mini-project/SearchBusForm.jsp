@@ -6,16 +6,17 @@
 
 <!-- ***********   START   *********** -->
 <jsp:include page="layout/Header.jsp" />
-<script type="text/javascript" src="assets/js/blank.js"></script>
+
 <!-- Session validation for bus operator  -->
 <%
     if (session.getAttribute("type") == null) {
         response.sendRedirect("index.jsp");
     }
 %>
+
 <div class="main-body" >
 <jsp:include page="layout/UserSidebar.jsp" />
-<div class="mymainWrapper"style="padding-top: 50px">
+<div class="mymainWrapper">
     <div class="centerformWrapper ">
         <div class="centertitle ">
             SEARCH BUS
@@ -62,8 +63,8 @@
                     <label for="from">Date</label>
                     <input class="formcontrol" type="text" name="date" />
                 </div>
-              <div class="formgroup">
-                 &emsp;&emsp;&emsp; <button type="submit" class="btn btnsuccess">Search</button>&emsp;&emsp;&emsp;
+              <div class="formgroup buttoncenter">
+                 <button type="submit" class="btn btnsuccess">Search</button>
                     <button type="reset" class="btn btnwarning">Reset</button>
                 </div>
                     

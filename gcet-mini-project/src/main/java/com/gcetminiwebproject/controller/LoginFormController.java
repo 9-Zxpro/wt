@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.gcetminiwebproject.utility.Validate;
 import com.gcetminiwebproject.models.AdminModel;
+import com.gcetminiwebproject.models.BusOperatorModel;
 import com.gcetminiwebproject.models.UserModel;
 
 public class LoginFormController extends HttpServlet {
@@ -30,20 +31,43 @@ public class LoginFormController extends HttpServlet {
 		String userPassword = request.getParameter("password");
 		String type = request.getParameter("type");
 
-		
 		// form validation
 		String errorMessage = Validate.validateLogin(userName, userPassword);
 		if (!errorMessage.equalsIgnoreCase("")) {
 			if(type.equalsIgnoreCase("user")){
 				response.sendRedirect("index.jsp?msg="+errorMessage);
 			}
+			else if(type.equalsIgnoreCase("busoperator")){
+				response.sendRedirect("BusOperatorLogin.jsp?msg="+errorMessage);
+			}
 			else{
 				response.sendRedirect("AdminLogin.jsp?msg="+errorMessage);
 			}
 		}
 		else{
-	
-			if (type.equalsIgnoreCase("admin")) {
+			
+			if (type.equalsIgnoreCase("busoperator")) {
+				String msg = "";
+				BusOperatorModel bom = new BusOperatorModel();
+				bom.setEmail(request.getParameter("username"));
+				bom.setPassword(request.getParameter("password"));
+				try {
+					if (bom.selectLoginData()) {
+						HttpSession session = request.getSession();
+						session.setAttribute("email", userName);
+						session.setAttribute("type", type);
+						String userid = "";
+						userid = bom.getUserIDFromEmail(userName);
+						session.setAttribute("userid", userid);
+						response.sendRedirect("indexBusOperator.jsp");
+					} else {
+						msg = msg + " User password is incorrect";
+						response.sendRedirect("BusOperatorLogin.jsp?msg=" + msg);
+					}
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			} else if (type.equalsIgnoreCase("admin")) {
 	
 				AdminModel am = new AdminModel();
 				am.setUserid(userName);
@@ -96,5 +120,3 @@ public class LoginFormController extends HttpServlet {
 		}
 	}
 }
-
-

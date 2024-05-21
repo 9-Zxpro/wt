@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="formcontrol"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="tablebordered"/>
-			<item value="DBConnector"/>
-			<item value="cognizant"/>
 			<item value="form-control"/>
 			<item value="form-group"/>
+			<item value="glyphicon"/>
+			<item value="com.cognizant.controller"/>
+			<item value="com.cognizant"/>
+			<item value="DBConnector"/>
+			<item value="tablebordered"/>
+			<item value="cognizant"/>
 			<item value="formgroup"/>
 			<item value="myheader"/>
 			<item value="container-fluid"/>
 		</list>
 		<list key="replacehistory">
-			<item value="DBConnectivity"/>
-			<item value="gcetminiwebproject"/>
 			<item value="formcontrol"/>
 			<item value="formgroup"/>
+			<item value="com.gcetminiwebproject.controller"/>
+			<item value="com.gcetminiwebproject"/>
+			<item value="DBConnectivity"/>
+			<item value="gcetminiwebproject"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

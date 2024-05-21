@@ -6,11 +6,11 @@
 <%@page import="com.gcetminiwebproject.models.UserModel"%>
 
 <!-- Session validation for bus operator  -->
-<%-- <%
+<%
 	if (session.getAttribute("type") == null) {
 		response.sendRedirect("AdminLogin.jsp");
 	}
-%> --%>
+%>
 <!-- session validation ends -->
 <jsp:include page="layout/Header.jsp" />
 <!-- ***********   START   *********** -->
@@ -35,7 +35,6 @@
 					<th>EMail</th>
 					<th>City</th>
 					<th>Phone Number</th>
-					<th>Password</th>
 				</tr>
 				<%
 					while (rs.next()) {
@@ -47,7 +46,6 @@
 					<td><%=rs.getString(4)%></td>
 					<td><%=rs.getString(5)%></td>
 					<td><%=rs.getString(6)%></td>
-					<td><%=rs.getString(7)%></td>
 				</tr>
 				<%
 					}

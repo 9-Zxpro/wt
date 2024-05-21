@@ -31,7 +31,7 @@
 					<input type="hidden" name="type" value="admin"/>
 				</div>		
 				<div class="formgroup buttoncenter">
-                                    <input type="submit" class="btn btnsuccess" value="Submit"/>
+                    <input type="submit" class="btn btnsuccess" value="Submit"/>
 					<input type="reset" class="btn btnwarning" value="Reset"/>
 				</div>
 			</form>			

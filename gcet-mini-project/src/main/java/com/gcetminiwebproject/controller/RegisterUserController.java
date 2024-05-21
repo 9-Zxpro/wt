@@ -16,22 +16,27 @@ public class RegisterUserController extends HttpServlet {
 
 	public RegisterUserController() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
+	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 	}
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		/* String confirmPassword = request.getParameter("confirmPassword"); */
+		String confirmPassword = request.getParameter("confirmPassword");
 		String firstName = request.getParameter("fName");
 		String lastName = request.getParameter("lName");
 		String city = request.getParameter("city");
 		String phoneNumber = request.getParameter("phoneNumber");
 		String address = request.getParameter("address");
+		String sq = request.getParameter("sq");
+		String sa = request.getParameter("sa");
 		
 		UserModel um = new UserModel();
 		um.setEmail(username);
@@ -41,7 +46,9 @@ public class RegisterUserController extends HttpServlet {
 		um.setCity(city);
 		um.setAddress(address);
 		um.setPhoneNumber(phoneNumber);
-		
+		/*
+		 * um.setSecurityAnswer(sa); um.setSecurityQuestion(sq);
+		 */
 		try {
 			if(um.insertRegistrationData()){
 				System.out.println(username+"::registration successful\nAuto login into dashboard");
@@ -83,4 +90,3 @@ public class RegisterUserController extends HttpServlet {
 	}
 
 }
-

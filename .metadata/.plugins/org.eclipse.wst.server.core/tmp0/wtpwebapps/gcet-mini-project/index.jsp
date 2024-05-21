@@ -5,12 +5,6 @@
 <%@page import="javax.servlet.http.*"%>
 <%@page import="com.gcetminiwebproject.models.BusModel" %>
 
-<!--for form validation-->
-<script type="text/javascript" src="assets/js/blank.js"></script>
-
-<script src="assets/js/jquery.min.js" type="text/javascript"></script> 
-<script src="assets/js/liquidmetal.js" type="text/javascript"></script>
-<script src="assets/js/jquery.flexselect.js" type="text/javascript"></script>
 
 
 
@@ -113,13 +107,9 @@
                             class="formcontrol" id="date" name="date"> -->
                     <input class="tcal formcontrol" type="text" name="date" />
                 </div>
-                <div class="formgroup ">
-                    <button type="submit"
-                            class="btn btnsuccess "
-                            style="float: left">Search Buses</button>
-                    <button type="reset"
-                            class="btn btnwarning "
-                            style="float: right">Clear</button>
+                <div class="formgroup buttoncenter">
+                    <button type="submit" class="btn btnsuccess ">Search Buses</button>
+                    <button type="reset" class="btn btnwarning ">Clear</button>
                 </div>
             </form>
         </div>
@@ -148,20 +138,16 @@
                 <div class="formgroup">
                     <input type="hidden" name="type" value="user" />
                 </div>
-                <div class="formgroup">
-                    <button type="submit"
-                            class="btn btnsuccess"
-                            style="float: left">Login</button>
-                    <button type="reset"
-                            class="btn btnwarning"
-                            style="float: right">Clear</button>
+                <div class="formgroup buttoncenter">
+                    <button type="submit" class="btn btnsuccess">Login</button>
+                    <button type="reset" class="btn btnwarning">Clear</button>
                 </div>
             </form>
 
         </div>
 
         <div class="logOptions">
-            <a href="RegisterUser.jsp"> Sign Up</a> <span>|</span> <a href="AdminLogin.jsp">Admin Login</a>
+            <a href="BusOperatorLogin.jsp">Bus Operator Login</a> <span> | </span> <a href="RegisterUser.jsp"> User Sign up</a> <span>|</span> <a href="AdminLogin.jsp">Admin Login</a>
         </div>
 
     </div>

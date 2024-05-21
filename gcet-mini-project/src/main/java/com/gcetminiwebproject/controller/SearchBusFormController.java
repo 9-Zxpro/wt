@@ -44,17 +44,19 @@ public class SearchBusFormController extends HttpServlet {
 		}
 		Date d1 = new Date();
 
-		if (d1.equals(d2) || d1.before(d2)) {
+		if (d1.equals(d2) || d1.after(d2)) {
 
 			bm.setSourceCity(sourceCity);
 			bm.setDepartureDate(departDate);
 			bm.setDestinationCity(destinationCity);
 			rs = bm.searchBusBetweenStations();
+			
 
 			try {
 				rs.last();
 				int count = 0;
 				count = rs.getRow();
+				
 				if (count <= 0) {
 					String msg = "No bus found between " + sourceCity + " and "
 							+ destinationCity;
@@ -77,6 +79,7 @@ public class SearchBusFormController extends HttpServlet {
 				String msg = "No bus found between " + sourceCity + " and "
 						+ destinationCity;
 				HttpSession session = request.getSession();
+				System.out.println(d2);
 				System.out.println("Search results not found!! for exception");
 				if (session.getAttribute("type") == null) {
 					response.sendRedirect("index.jsp?msg=" + msg);

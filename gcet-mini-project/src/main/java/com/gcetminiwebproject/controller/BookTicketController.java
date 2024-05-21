@@ -12,20 +12,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import com.gcetminiwebproject.models.BookingModel;
 
-
+/**
+ * Servlet implementation class BookTicketController
+ */
 public class BookTicketController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
 	public BookTicketController() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
+
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
 	}
 
 	protected void doPost(HttpServletRequest request,
@@ -60,7 +67,7 @@ public class BookTicketController extends HttpServlet {
                                         String noOfseats =request.getParameter("noOfseats"); 
                                         
 					bm.setUserID(email);
-                                        //get all booking info by Id
+                                        //get all bookin info by Id
 					rs = bm.getBookingInfo("user", "na");
 
 					RequestDispatcher rd = request
@@ -95,6 +102,7 @@ public class BookTicketController extends HttpServlet {
 				e.printStackTrace();
 			}
 			if (!bookingID.equals("")) {
+				PrintWriter out = response.getWriter();
 				response.sendRedirect("GetBookingInformation.jsp?msg=Success&booking="
 						+ bookingID);
 			} else {
@@ -105,4 +113,3 @@ public class BookTicketController extends HttpServlet {
 		}
 	}
 }
-

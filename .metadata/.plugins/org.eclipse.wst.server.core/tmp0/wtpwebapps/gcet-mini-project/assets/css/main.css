@@ -23,7 +23,6 @@ body {
 }
 
 header {
-	
 	height: 65px;
 }
 
@@ -37,6 +36,7 @@ option{
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
+	overflow: scroll;
 }
 .myWindow {
 	flex-direction: column;
@@ -147,27 +147,45 @@ option{
 	display: flex;
 	justify-content: space-between;
 }
-.btnsuccess {
-	background-color: #28a745;
+.btn {
+	cursor: pointer;
+    user-select: none;
 	padding: 8px 26px 8px 26px;
-	border-radius: 8px;
+	border-radius: 4px;
 	color: #FFF;
 	font-weight: 800;
+}
+.btn:hover{
+	border-color: var(--bg);
+}
+.btnsuccess {
+	background-image: linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+	background-repeat: repeat-x;
+    border-color: #008000;
+    
+}
+.btnsuccess:hover, .btnsuccess:focus {
+	background-color: #449d44;
+	border-color: #398439;
 }
 .btnwarning {
-	background-color: #ffc107;
-	padding: 8px 26px 8px 26px;
-	border-radius: 8px;
-	color: #FFF;
-	font-weight: 800;
+	background-image: linear-gradient(to bottom, #f0ad4e 0%, #eb9316 100%);
+	background-repeat: repeat-x;
+}
+.btnwarning:hover, .btnwarning:focus {
+	background-color: #eb9316;
+	border-color: #d58512;
 }
 .btndanger {
-	background-color: #dc3545;
-	padding: 8px 26px 8px 26px;
-	border-radius: 8px;
-	color: #FFF;
-	font-weight: 800;
+	background-image: linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+	background-repeat: repeat-x;
 }
+.btndanger:hover, .btndanger:focus {
+	background-color: #c12e2a;
+	border-color: #b92c28;
+	
+}
+
 .forgotpwd{
 	font-size:14px;
 	border: 2px solid #eecc11;

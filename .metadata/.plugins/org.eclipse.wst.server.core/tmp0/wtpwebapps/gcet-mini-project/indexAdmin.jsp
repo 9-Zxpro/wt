@@ -4,11 +4,11 @@
 <jsp:include page="layout/Header.jsp" />
 
 <!-- Session validation for bus operator  -->
-<%-- <%
+<%
 	if(session.getAttribute("type")==null ){
 		response.sendRedirect("index.jsp");
 	}
-%> --%>
+%>
 <!-- session validation ends -->
 
 
@@ -18,6 +18,7 @@
  <div class="dashboard ">
 	<div class="dashboardBody ">
 		<div class="formTitle">Admin Dashboard</div>
+		
 		<div class="dashboarddiv ">
 			<div class="odd ">
 				<div class="dashimg">
@@ -35,24 +36,24 @@
 					<a href="ViewAllBookings.jsp">View</a>
 				</div>
 			</div>
-			<!-- <div class="odd">
+			<div class="odd">
 				<div class="dashimg">
 					Delete Bus Operator
 					</div>
 				<div class="dashcontent">					
 					<a href="DeleteBusOperatorByAdmin.jsp">Delete</a>
 				</div>
-			</div> -->
+			</div> 
 			</div>
 			<div class="dashboarddiv ">
-			<!-- <div class="even ">
+			<div class="even ">
 				<div class="dashimg">
 					Add Bus Operator
 					</div>
 				<div class="dashcontent">					
 					<a href="addnewbusoperator.jsp">Add</a>
 				</div>
-			</div> -->
+			</div>
 			<div class="even ">
 				<div class="dashimg">
 					View Users

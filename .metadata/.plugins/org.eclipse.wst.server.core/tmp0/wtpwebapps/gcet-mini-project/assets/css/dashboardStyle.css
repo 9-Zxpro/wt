@@ -63,7 +63,7 @@
 		
 		border-left: 2px solid #eecc11;
 		overflow: hidden;
-		
+		padding-left: 10px;
 	}
 	::-webkit-scrollbar {
     width: 8px;
@@ -120,9 +120,11 @@
 		padding:15px;
 		cursor:pointer;
 	}
-	.dashimg .glyphicon{
-		display:none;
-		visibility:hidden;
+	.glyphicon{
+		display: flex;
+		justify-content: center;
+		font-weight: 800;
+		
 	}
 	.dashcontent{
 		display:none;

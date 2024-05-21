@@ -12,6 +12,9 @@ import javax.servlet.http.HttpSession;
 import com.gcetminiwebproject.utility.ReturnClass;
 import com.gcetminiwebproject.models.BusFrequencyModel;
 import com.gcetminiwebproject.models.BusModel;
+
+/*import com.sun.org.apache.xpath.internal.operations.Bool;*/
+
 public class AddNewBusController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +27,7 @@ public class AddNewBusController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
 	}
 
 	protected void doPost(HttpServletRequest request,
@@ -119,4 +122,3 @@ public class AddNewBusController extends HttpServlet {
 	}
 
 }
-
